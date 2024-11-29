@@ -1,0 +1,85 @@
+@use 'variables' as *;
+
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media  screen and (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+@mixin mobile-wordmark-style{
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 400;
+}
+@mixin mobile-title-style($style){
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: 300;
+    font-style: $style;
+
+}
+@mixin mobile-heading-style{
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 500;
+}
+
+@mixin mobile-body-style($weight){
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: $weight;
+}
+@mixin mobile-small-body-style{
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+}
+@mixin mobile-label-style {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+}
+//////
+@mixin tablet-desktop-wordmark-style{
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;
+}
+@mixin tablet-desktop-title-style($style){
+    font-size: 52px;
+    line-height: 66px;
+    font-weight: 300;
+    font-style: $style;
+}
+@mixin tablet-desktop-heading-style{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+}
+@mixin tablet-desktop-body-style($weight){
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: $weight;
+}
+@mixin tablet-desktop-small-body-style{
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+}
+@mixin tablet-desktop-label-styel{
+    font-weight: 14px;
+    line-height: 17.5px;
+    font-weight: 500;
+}

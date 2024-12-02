@@ -6,6 +6,9 @@
     @include tablet{
         @include tablet-padding;
     }
+    @include desktop{
+        width: 60%;
+    }
     &__title{
         @include mobile-body-style(300);
         @include tablet{

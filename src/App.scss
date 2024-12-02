@@ -1,2 +1,17 @@
 @use "./styles/partials/global" as *;
+@use './styles/partials/mixins' as *;
+.tag-wrapper{
+    @include desktop{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+    
+}
+.container{
+    @include desktop{
+        display: flex;
+        flex-direction: column;
+    }
+}
 

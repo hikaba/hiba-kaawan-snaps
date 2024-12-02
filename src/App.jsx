@@ -7,7 +7,7 @@ import TagList from './components/TagList/TagList';
 import photos from './data/photos.json';
 import { useState } from "react";
 function App() {
-  const [filterStatus, setFilterStatus] = useState(true);
+  const [filterStatus, setFilterStatus] = useState(false);
   const [selectedTag, setSelectedTag] = useState("");
   
   function handleStatusClick(){
@@ -19,19 +19,19 @@ function App() {
   return (
     <>
       <Header setStatus={handleStatusClick} filterStatus={filterStatus}/>
-      <main>
-        <div className="container">
+      <main> 
+        <div className="tag-wrapper">
           {filterStatus ? (
             <TagList handleTagClick={handleTagClick} selectedTag={selectedTag} />
           ) : null}
-          <Intro />
-          <PhotoList selectedTag={selectedTag}/>
+          <div className="container">
+            <Intro />
+            <PhotoList filterStatus={filterStatus} selectedTag={selectedTag}/>
+          </div>
         </div>
-  
       </main>
       <Footer/>
     </>
   )
 }
-
 export default App

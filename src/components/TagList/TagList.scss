@@ -7,6 +7,10 @@
     @include tablet {
         @include tablet-padding;
     }
+    @include desktop{
+        flex-basis: 30%;
+        flex-shrink: 0;
+    }
     &__title{
         @include mobile-heading-style;
         @include tablet{
@@ -18,7 +22,7 @@
         margin: 0;
         padding: 0;
         display: flex;
-        flex-flow: row wrap;
+        flex-wrap: wrap;
         gap: 0.5rem;
     }
     &__item{

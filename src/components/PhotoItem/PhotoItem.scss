@@ -6,7 +6,15 @@
     border-radius: 0.5rem;
     background-color: $secondary-background-color;
     @include tablet{
-        width: 48.3%;
+        width: calc(50% - 0.75rem);
+    }
+    @include desktop{
+        width: calc((100% - 3rem) / 3);
+    }
+    &--width{
+        @include desktop{
+            width: calc(50% - 0.75rem);
+        }
     }
     &__image-container{
         position: relative;

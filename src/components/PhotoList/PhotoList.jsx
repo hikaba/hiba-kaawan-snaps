@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 function PhotoList(props){
     const [photos, setPhotos] = useState(photosData);
-    // console.log("image:", photos);
     let filteredPhotos = [];
 
     if(props.selectedTag != ""){
@@ -20,7 +19,7 @@ function PhotoList(props){
         <section className="photo-list">
             <ul className="photo-list__list">
                 {filteredPhotos.map((photo) => {
-                    return <PhotoItem key={photo.id} photo={photo}/>;
+                    return <PhotoItem width={props.filterStatus} key={photo.id} photo={photo}/>;
                 })}
             </ul>
         </section>

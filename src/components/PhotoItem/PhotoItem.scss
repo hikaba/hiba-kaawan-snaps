@@ -5,6 +5,9 @@
     border: 0.063rem solid $border-color;
     border-radius: 0.5rem;
     background-color: $secondary-background-color;
+    @include tablet{
+        width: 48.3%;
+    }
     &__image-container{
         position: relative;
     }
@@ -15,15 +18,22 @@
     }
     &__container{
         padding: 0.5rem;
+        @include tablet{
+            padding: 1rem;
+        }
     }
     &__photographer{
         position: absolute;
         bottom: 0rem;
         right: 0rem;
+        z-index: 1;
         background-color: $secondary-background-color;
         padding: 0.375rem 0.5rem;
         border-radius: 0.5rem 0 0 0;
-        @include mobile-label-style
+        @include mobile-label-style;
+        @include tablet{
+            @include tablet-desktop-label-style;
+        }
     }
     &__tags{
         list-style: none;
@@ -36,5 +46,10 @@
     &__tag-item{
         @include mobile-label-style;
         @include mobile-tag-list-item-style-non-clickable;
+
+        @include tablet{
+            @include tablet-desktop-label-style;
+            @include tablet-desktop-tag-list-item-style-non-clickable(0.5rem);
+        }
     }
 }

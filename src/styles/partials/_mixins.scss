@@ -23,7 +23,7 @@
     line-height: 2rem;
     font-weight: 400;
     font-family: $font-stack;
-    padding: 1rem 0 1.5rem;
+    padding: 0 0 1.5rem;
     margin: 0;
 }
 @mixin mobile-title-style($style){
@@ -61,6 +61,16 @@
     font-size: 0.75rem;
     line-height: 0.938rem;
     font-weight: 500;
+}
+@mixin mobile-cta-button {
+    padding: 0.5rem 1rem;
+    background-color: $primary-background-color;
+    color: $primary-accent-color;
+    border: 2px solid $primary-accent-color;
+    border-radius: 20px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }
 @mixin mobile-tag-list-item-style-clickable{
     padding: 0.375rem 0.5rem;
@@ -104,17 +114,37 @@
     line-height: 0.938rem;
     font-weight: 500;
 }
-@mixin tablet-desktop-label-styel{
-    font-weight: 0.875rem;
+@mixin tablet-desktop-label-style{
+    font-size: 0.875rem;
     line-height: 1.094rem;
     font-weight: 500;
 }
-
-@mixin tablet-desktop-tag-list-item-style{
+@mixin tablet-desktop-cta-button {
+    padding: 0.688rem 1.375rem;
+    background-color: $primary-background-color;
+    color: $primary-accent-color;
+    border: 2px solid $primary-accent-color;
+    border-radius: 25px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+@mixin tablet-desktop-tag-list-item-style-clickable($radius){
     padding: 0.5rem 0.75rem;
     border: 0.063rem solid $primary-accent-color;
     background-color: $secondary-text-color;
-    border-radius: 0.75rem;
-    color: $primary-accent-color;    
+    border-radius: $radius;
+    color: $primary-accent-color;
+}
+@mixin tablet-desktop-tag-list-item-style-non-clickable($radius){
+    padding: 0.5rem 0.75rem;
+    border: 0.063rem solid $border-color;
+    background-color: $secondary-text-color;
+    border-radius: $radius;
+    color: $primary-text-color;
+}
+
+@mixin tablet-padding{
+    padding: 1.5rem;
 }
 

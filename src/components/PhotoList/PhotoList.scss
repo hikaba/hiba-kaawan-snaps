@@ -3,6 +3,9 @@
 
 .photo-list{
     padding: 1rem;
+    @include tablet{
+        @include tablet-padding;
+    }
     &__list{
         list-style: none;
         padding: 0;
@@ -10,5 +13,11 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        @include tablet{
+            display: flex;
+            flex-flow: row wrap;
+            gap: 1.5rem;
+            justify-content: space-between;
+        }
     }
 }

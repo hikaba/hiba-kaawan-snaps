@@ -14,7 +14,7 @@ function App() {
     setFilterStatus(!filterStatus)
   }
   function handleTagClick(clickedTag){
-    setSelectedTag(clickedTag);
+  setSelectedTag(currentTag => currentTag === clickedTag ? "" : clickedTag);
   }
   return (
     <>

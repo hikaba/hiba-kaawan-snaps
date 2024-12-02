@@ -17,6 +17,14 @@
     }
     &__item{
         @include mobile-label-style;
-        @include mobile-tag-list-item-style;
+        @include mobile-tag-list-item-style-clickable;
+        &:hover{
+            background-color: $primary-accent-color;
+            color: $secondary-text-color;
+        }
+        &--active{
+            background-color: $primary-accent-color;
+            color: $secondary-text-color;
+        }
     }
 }

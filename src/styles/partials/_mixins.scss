@@ -62,13 +62,19 @@
     line-height: 0.938rem;
     font-weight: 500;
 }
-@mixin mobile-tag-list-item-style{
+@mixin mobile-tag-list-item-style-clickable{
     padding: 0.375rem 0.5rem;
     border: 0.063rem solid $primary-accent-color;
     background-color: $secondary-text-color;
     border-radius: 0.5rem;
     color: $primary-accent-color;
-    
+}
+@mixin mobile-tag-list-item-style-non-clickable{
+    padding: 0.375rem 0.5rem;
+    border: 0.063rem solid $border-color;
+    background-color: $secondary-text-color;
+    border-radius: 0.5rem;
+    color: $primary-text-color;
 }
 //////
 @mixin tablet-desktop-wordmark-style{

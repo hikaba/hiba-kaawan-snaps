@@ -3,13 +3,38 @@
 
 .photo-item{
     border: 0.063rem solid $border-color;
-    border-radius: 12px;
+    border-radius: 0.5rem;
     background-color: $secondary-background-color;
+    &__image-container{
+        position: relative;
+    }
     &__image{
         width:100% ;
-        border-radius: 12px 12px 0 0;
+        border-radius: 0.5rem 0.5rem 0 0;
+        display: block;
     }
-    &__details{
+    &__container{
+        padding: 0.5rem;
+    }
+    &__photographer{
+        position: absolute;
+        bottom: 0rem;
+        right: 0rem;
+        background-color: $secondary-background-color;
+        padding: 0.375rem 0.5rem;
+        border-radius: 0.5rem 0 0 0;
         @include mobile-label-style
+    }
+    &__tags{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 0.5rem;
+    }
+    &__tag-item{
+        @include mobile-label-style;
+        @include mobile-tag-list-item-style-non-clickable;
     }
 }

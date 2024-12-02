@@ -1,0 +1,15 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.photo-item{
+    border: 0.063rem solid $border-color;
+    border-radius: 12px;
+    background-color: $secondary-background-color;
+    &__image{
+        width:100% ;
+        border-radius: 12px 12px 0 0;
+    }
+    &__details{
+        @include mobile-label-style
+    }
+}

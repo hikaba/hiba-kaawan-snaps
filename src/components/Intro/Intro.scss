@@ -1,0 +1,16 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.intro{
+    padding: 1rem;
+    &__title{
+        @include mobile-body-style(300);
+    }
+    &__details{
+        @include mobile-title-style(normal);
+    }
+    &__details--italic{
+        @include mobile-title-style(italic);
+    }
+
+}

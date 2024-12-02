@@ -1,38 +1,33 @@
 import './App.scss';
 import Footer from './components/Footer/footer';
-import photos from './data/photos.json'
+import Header from './components/Header/Header';
+import Intro from './components/Intro/Intro';
+import PhotoList from './components/PhotoList/PhotoList';
+import TagList from './components/TagList/TagList';
+import photos from './data/photos.json';
+import { useState } from "react";
 function App() {
-  const user = {
-    name:"bob",
-    age: 75,
-    height: "tall"
-  };
+  const [filterStatus, setFilterStatus] = useState(true);
+  const [selectedTag, setSelectedTag] = useState("");
+  
+  function handleStatusClick(){
+    setFilterStatus(!filterStatus)
+  }
+  function handleTagClick(clickedTag){
+    setSelectedTag(clickedTag);
+  }
   return (
     <>
-      <h1>Hello React</h1>
-      <header className='header'>
-        <nav className="header__nav">
-          <ul className="header__list">
-            <li className="header__item">Home</li>
-            <li className="header__item">About</li>
-            <li className="header__item">Contact</li>
-          </ul>
-        </nav>
-      </header>
+      <Header setStatus={handleStatusClick} filterStatus={filterStatus}/>
       <main>
-        <section className="hero">
-          <h1 className="hero__title">React JSX</h1>
-        </section>
-
-        <section className="user">
-          <p className="user__name">
-            {user.name}
-          </p>
-          <p className="user__name">
-            {user.age}
-          </p>
-        </section>
-        <p></p>
+        <div className="container">
+          {filterStatus ? (
+            <TagList handleTagClick={handleTagClick} selectedTag={selectedTag} />
+          ) : null}
+          <Intro />
+          <PhotoList selectedTag={selectedTag}/>
+        </div>
+  
       </main>
       <Footer/>
     </>

@@ -19,67 +19,96 @@
     }
 }
 @mixin mobile-wordmark-style{
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 2rem;
+    line-height: 2rem;
     font-weight: 400;
+    font-family: $font-stack;
+    padding: 1rem 0 1.5rem;
+    margin: 0;
 }
 @mixin mobile-title-style($style){
-    font-size: 26px;
-    line-height: 38px;
+    font-size: 1.625rem;
+    line-height: 2.375rem;
     font-weight: 300;
     font-style: $style;
+    font-family: $font-stack;
+    padding: 0 0 1.5rem;
+    margin: 0;
 
 }
 @mixin mobile-heading-style{
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 1.125rem;
+    line-height: 1.438rem;
     font-weight: 500;
+    padding: 1rem 0 1.5rem;
+    margin: 0;
 }
 
 @mixin mobile-body-style($weight){
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
     font-weight: $weight;
+    padding: 0 0 1rem;
+    margin: 0;
 }
 @mixin mobile-small-body-style{
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
     font-weight: 500;
 }
 @mixin mobile-label-style {
-    font-size: 12px;
-    line-height: 15px;
+    font-family: $font-stack-body;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
     font-weight: 500;
+}
+@mixin mobile-tag-list-item-style{
+    padding: 0.375rem 0.5rem;
+    border: 0.063rem solid $primary-accent-color;
+    background-color: $secondary-text-color;
+    border-radius: 0.5rem;
+    color: $primary-accent-color;
+    
 }
 //////
 @mixin tablet-desktop-wordmark-style{
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
     font-weight: 400;
+    font-family: $font-stack;
 }
 @mixin tablet-desktop-title-style($style){
-    font-size: 52px;
-    line-height: 66px;
+    font-size: 3.25rem;
+    line-height: 4.125rem;
     font-weight: 300;
     font-style: $style;
 }
 @mixin tablet-desktop-heading-style{
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     font-weight: 500;
 }
 @mixin tablet-desktop-body-style($weight){
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
     font-weight: $weight;
 }
 @mixin tablet-desktop-small-body-style{
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
     font-weight: 500;
 }
 @mixin tablet-desktop-label-styel{
-    font-weight: 14px;
-    line-height: 17.5px;
+    font-weight: 0.875rem;
+    line-height: 1.094rem;
     font-weight: 500;
 }
+
+@mixin tablet-desktop-tag-list-item-style{
+    padding: 0.5rem 0.75rem;
+    border: 0.063rem solid $primary-accent-color;
+    background-color: $secondary-text-color;
+    border-radius: 0.75rem;
+    color: $primary-accent-color;    
+}
+

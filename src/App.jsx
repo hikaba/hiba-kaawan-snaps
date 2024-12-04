@@ -4,7 +4,6 @@ import Header from './components/Header/Header';
 import Intro from './components/Intro/Intro';
 import PhotoList from './components/PhotoList/PhotoList';
 import TagList from './components/TagList/TagList';
-import photos from './data/photos.json';
 import { useState } from "react";
 function App() {
   const [filterStatus, setFilterStatus] = useState(false);

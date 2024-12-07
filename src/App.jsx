@@ -1,6 +1,6 @@
 import './App.scss';
-import Home from './pages/Home';
-import Photo from './pages/Photo';
+import Home from './pages/Home/Home';
+import Photo from './pages/Photo/Photo';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element= {<Home />}/>
-        <Route path='photo' element = {<Photo />} />
+        <Route path='photo/:id' element = {<Photo />} />
       </Routes>
     </BrowserRouter>
     </>

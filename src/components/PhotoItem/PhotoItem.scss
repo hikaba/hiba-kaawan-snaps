@@ -16,6 +16,10 @@
             width: calc(50% - 0.75rem);
         }
     }
+    &__link{
+        text-decoration: none;
+        color: inherit;
+    }
     &__image-container{
         position: relative;
     }

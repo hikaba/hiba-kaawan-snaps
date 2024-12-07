@@ -31,6 +31,7 @@
         &:hover{
             background-color: $primary-accent-color;
             color: $secondary-text-color;
+            cursor: pointer;
         }
         &--active{
             background-color: $primary-accent-color;

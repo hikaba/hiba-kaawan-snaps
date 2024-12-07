@@ -25,6 +25,7 @@
         &:hover{
             background-color: $primary-accent-color;
             color: $secondary-text-color;
+            cursor: pointer;
             .header__button-icon {
                 fill: $secondary-text-color;
             }

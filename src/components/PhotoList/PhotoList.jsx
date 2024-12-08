@@ -6,6 +6,7 @@ import { useState } from 'react';
 function PhotoList(props){
     const [photos, setPhotos] = useState(photosData);
     let filteredPhotos = [];
+    console.log(photos)
 
     if(props.selectedTag != ""){
         filteredPhotos = photos.filter((photo) => {
@@ -14,7 +15,7 @@ function PhotoList(props){
     }else {
         filteredPhotos = photos;
     }
-    
+
     return(
         <section className="photo-list">
             <ul className="photo-list__list">

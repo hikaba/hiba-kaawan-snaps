@@ -9,6 +9,10 @@
     @include tablet{
         @include tablet-padding;
     }
+    &__link{
+        text-decoration: none;
+        color: inherit;
+    }
     &__title{
         @include mobile-wordmark-style;
         @include tablet{

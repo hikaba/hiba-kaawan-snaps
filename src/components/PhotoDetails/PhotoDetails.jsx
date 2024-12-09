@@ -1,7 +1,5 @@
 import './PhotoDetails.scss';
-function PhotoDetails(props){
-    const photo = props.photo;
-    console.log(photo)
+function PhotoDetails({photo}){
     const timestamp = photo.timestamp;
     const date = new Date(timestamp);
     const day = String(date.getDate()).padStart(2,'0');
@@ -31,7 +29,5 @@ function PhotoDetails(props){
         </li>
     </ul>
     )
-
-
 }
 export default PhotoDetails;

@@ -1,11 +1,14 @@
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 function Header(props) {
     return (
         <header className="header">
-            <h1 className="header__title">
-                Snaps
-            </h1>
+            <Link to={'/'} className='header__link'>
+                <h1 className="header__title">
+                    Snaps
+                </h1>
+            </Link>
             <button onClick={props.setStatus} className={`header__button ${props.filterStatus ? `header__button--active`:""}`} >
                 Filters
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none" className="header__button-icon">

@@ -16,16 +16,16 @@ function Footer (){
                 </div>
                 <div className="footer__content footer__content--flex">
                     <a href="https://www.facebook.com/" target="_blank" className='footer__social-icon-link'>
-                        <img src="src/assets/icons/Facebook.svg" alt="facebook" className="footer__social-icon"/>
+                        <img src="../src/assets/icons/Facebook.svg" alt="facebook" className="footer__social-icon"/>
                     </a>
                     <a href="https://x.com/?lang=en" target="_blank" className="footer__social-icon-link">
-                        <img src="src/assets/icons/X_twitter.svg" alt="x-twitter" className="footer__social-icon" />
+                        <img src="../src/assets/icons/X_twitter.svg" alt="x-twitter" className="footer__social-icon" />
                     </a>
                     <a href="https://www.instagram.com/" target="_blank" className="footer__social-icon-link">
-                        <img src="src/assets/icons/Instagram.svg" alt="instagram" className="footer__social-icon" />
+                        <img src="../src/assets/icons/Instagram.svg" alt="instagram" className="footer__social-icon" />
                     </a>
                     <a href="https://ca.pinterest.com/" target="_blank" className="footer__social-icon-link">
-                        <img src="src/assets/icons/Pinterest.svg" alt="pinterest" className="footer__social-icon" />
+                        <img src="../src/assets/icons/Pinterest.svg" alt="pinterest" className="footer__social-icon" />
                     </a>                    
                 </div>
             </div>

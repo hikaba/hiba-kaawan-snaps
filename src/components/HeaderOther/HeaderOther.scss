@@ -23,6 +23,9 @@
         text-decoration: none;
         color: $primary-accent-color;
     }
+    &__link--color{
+        color: inherit;
+    }
     &__heading{
         @include mobile-heading-style;
         padding: 0;

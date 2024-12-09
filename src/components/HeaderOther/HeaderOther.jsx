@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 function HeaderOther(){
     return (
         <header className="header-other">
-            <h1 className="header-other__title">
-                Snaps
-            </h1>
+            <Link to={'/'} className='header-other__link header-other__link--color'>
+                <h1 className="header-other__title">
+                    Snaps
+                </h1>
+            </Link>
             <Link to={'/'} className='header-other__link'>
                 <div className="header-other__container-button">
                 <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">

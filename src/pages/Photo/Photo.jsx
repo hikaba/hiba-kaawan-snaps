@@ -1,25 +1,39 @@
 import "./Photo.scss";
 import HeaderOther from "../../components/HeaderOther/HeaderOther";
-import { useParams } from "react-router-dom";
-import photosData from "../../data/photos.json";
+import Footer from "../../components/Footer/footer";
 import PhotoDetails from "../../components/PhotoDetails/PhotoDetails";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 function Photo() {
-    const {id} = useParams();
-    const photo = photosData.find( p => p.photoId === id);
-    const timestamp = photo.timestamp;
-    const date = new Date(timestamp);
-    const day = String(date.getDate()).padStart(2,'0');
-    const month = String(date.getMonth()+1).padStart(2, '0');
-    const year = String(date.getFullYear())
-    const fullDate = `${month}/${day}/${year}`;
-    
-    if (!photo) {
-        return <div>Photo not Found</div>;
-    }
+    const [photo, setPhoto] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const params = useParams();
+    const apiKey = "bb1afd72-69af-4298-bc35-5df91725a3f2";
+    const baseURL = "https://unit-3-project-c5faaab51857.herokuapp.com/";
+
+    useEffect(() => {
+        async function getPhotoDetails(){
+            setLoading(true);
+            try{
+                const response = await axios.get(`${baseURL}photos/${params.photoId}?api_key=${apiKey}`);
+                setPhoto(response.data);
+            } catch (error) {
+                console.log("Error getting photo", error);
+            }
+            finally {
+                setLoading(false);
+            }
+        }
+        getPhotoDetails();
+    }, []);
+
     return(
         <div>
             <HeaderOther />
-            <PhotoDetails photo ={photo}/>
+            {loading ? <p></p> : <PhotoDetails photo={photo}/>}
+            <Footer />
         </div>
     );
 }

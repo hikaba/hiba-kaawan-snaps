@@ -1,11 +1,10 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
-.photo-list{
+.photo-list-other{
     list-style: none;
-    padding: 0;
-    margin: 0;
     padding: 1rem;
+    margin: 0;
 
     &__item{
         border: 0.063rem solid $border-color;
@@ -42,12 +41,17 @@
         }
     }
     &__container-details{
-        padding-top: 1rem;
+        padding: 1rem 0;
         display: flex;
+        align-items: center;
         gap: 0.5rem;
     }
     &__details{
         @include mobile-body-style(500);
+        padding: 0;
+        @include tablet {
+            @include tablet-desktop-body-style(500);
+        }
     }
     &__date{
         flex: 1;

@@ -1,0 +1,33 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.header-other{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    &__container-button{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    &__title{
+        @include mobile-wordmark-style;
+        padding: 1rem 0;
+        @include tablet{
+            @include tablet-desktop-wordmark-style;
+            padding: 1.5rem 0;
+        }
+    }
+    &__link{
+        text-decoration: none;
+        color: $primary-accent-color;
+    }
+    &__heading{
+        @include mobile-heading-style;
+        padding: 0;
+        @include tablet{
+            @include tablet-desktop-heading-style;
+        }
+    }
+}

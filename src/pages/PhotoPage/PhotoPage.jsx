@@ -2,6 +2,7 @@ import "./PhotoPage.scss";
 import HeaderOther from "../../components/HeaderOther/HeaderOther";
 import Footer from "../../components/Footer/footer";
 import PhotoDetails from "../../components/PhotoDetails/PhotoDetails";
+import CommentForm from "../../components/CommentForm/CommentForm";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -32,7 +33,8 @@ function PhotoPage() {
     return(
         <div>
             <HeaderOther />
-            {loading ? <p></p> : <PhotoDetails photo={photo}/>}
+            {loading ? <p>Loading...</p> : <PhotoDetails photo={photo}/>}
+            <CommentForm />
             <Footer />
         </div>
     );

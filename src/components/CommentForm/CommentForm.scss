@@ -1,0 +1,50 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.form-container{
+    padding: 1rem;
+}
+.photos-form{
+    display: flex;
+    flex-direction: column;
+    &__label{  
+        @include mobile-body-style(500);
+        padding: 8px 0;
+        @include tablet{
+            @include mobile-body-style(500);
+        }
+    }
+    &__input{
+        min-height: 30px;
+        min-width: 280px;
+        padding: 8px;
+        margin: 0 0 0.5rem;
+        border: 0.125rem solid $border-color;
+        border-radius: 6px;
+
+        @include tablet {
+            min-height: 40px;
+            padding: 8px 16px;
+        }
+        &--size{
+            min-height: 6.25rem;
+            resize: vertical;
+        }
+
+    }
+    &__button{
+        align-self: end;
+        margin: 1rem 0;
+        @include mobile-label-style;
+        @include mobile-tag-list-item-style-clickable;
+        color: $secondary-text-color;
+        background-color: $primary-accent-color;
+
+        @include tablet{
+            @include tablet-desktop-label-style;
+            @include tablet-desktop-tag-list-item-style-clickable(6px);
+            color: $secondary-text-color;
+            background-color: $primary-accent-color;
+        }
+    }
+}

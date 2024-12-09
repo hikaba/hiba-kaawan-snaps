@@ -3,6 +3,7 @@ import HeaderOther from "../../components/HeaderOther/HeaderOther";
 import Footer from "../../components/Footer/footer";
 import PhotoDetails from "../../components/PhotoDetails/PhotoDetails";
 import CommentForm from "../../components/CommentForm/CommentForm";
+import CommentList from "../../components/CommentList/CommentList";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -35,6 +36,7 @@ function PhotoPage() {
             <HeaderOther />
             {loading ? <p>Loading...</p> : <PhotoDetails photo={photo}/>}
             <CommentForm />
+            <CommentList />
             <Footer />
         </div>
     );

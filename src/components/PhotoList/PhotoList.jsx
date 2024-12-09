@@ -1,12 +1,25 @@
 import './PhotoList.scss';
-import photosData from "../../data/photos.json";
 import PhotoItem from "../PhotoItem/PhotoItem";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function PhotoList(props){
-    const [photos, setPhotos] = useState(photosData);
+    const apiKey = "bb1afd72-69af-4298-bc35-5df91725a3f2";
+    const baseURL = "https://unit-3-project-c5faaab51857.herokuapp.com/";
+    const [photos, setPhotos] = useState([]);
     let filteredPhotos = [];
-    console.log(photos)
+
+    async function getPhotos() {
+        try {
+            const response = await axios.get(`${baseURL}photos/?api_key=${apiKey}`);
+            setPhotos(response.data);
+        }catch (error) {
+            console.log("error getting photos", error);
+        }
+    }
+useEffect(() => {
+    getPhotos();
+}, []);
 
     if(props.selectedTag != ""){
         filteredPhotos = photos.filter((photo) => {

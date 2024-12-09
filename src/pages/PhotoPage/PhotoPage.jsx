@@ -1,4 +1,4 @@
-import "./Photo.scss";
+import "./PhotoPage.scss";
 import HeaderOther from "../../components/HeaderOther/HeaderOther";
 import Footer from "../../components/Footer/footer";
 import PhotoDetails from "../../components/PhotoDetails/PhotoDetails";
@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function Photo() {
+function PhotoPage() {
     const [photo, setPhoto] = useState(null);
     const [loading, setLoading] = useState(true);
     const params = useParams();
@@ -37,4 +37,4 @@ function Photo() {
         </div>
     );
 }
-export default Photo;
+export default PhotoPage;

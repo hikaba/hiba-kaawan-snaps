@@ -4,7 +4,7 @@ import Intro from '../../components/Intro/Intro';
 import PhotoList from '../../components/PhotoList/PhotoList';
 import TagList from '../../components/TagList/TagList';
 import { useState } from "react";
-function Home() {
+function HomePage() {
   const [filterStatus, setFilterStatus] = useState(false);
   const [selectedTag, setSelectedTag] = useState("");
   
@@ -34,4 +34,4 @@ function Home() {
   )
 
 }
-export default Home;
+export default HomePage;

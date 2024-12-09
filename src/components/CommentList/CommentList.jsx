@@ -1,3 +1,4 @@
+import './CommentList.scss';
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useEffect, useState} from "react";
@@ -11,7 +12,6 @@ const [comments, setComments] = useState([]);
 async function getComments() {
     try {
         const response = await axios.get(`${baseURL}/${param.photoId}/comments?api_key=${apiKey}`);
-        console.log(response.data);
         setComments(response.data);
     }catch (error){
         console.log("error getting comments", error);
@@ -20,9 +20,31 @@ async function getComments() {
 useEffect(()=>{
     getComments();
 }, [])
+comments.forEach((comment) =>{
+    const date = new Date(comment.timestamp);const day = String(date.getDate()).padStart(2,'0');
+    const month = String(date.getMonth()+1).padStart(2, '0');
+    const year = String(date.getFullYear())
+    const fullDate = `${month}/${day}/${year}`;
+    comment.timestamp = fullDate;
+
+})
+console.log(comments);
+
     return(
-        <section className="comments">
-            <ul className="comments__list">
+        <section className="comment">
+            <ul className="comment__list">
+            {comments.map((comment) => {
+            return (
+              <li key={comment.id} className="comment__item">
+                <div className="comment__container">
+                    <p className="comment__info comment__info--color">{comment.name}</p>
+                    <p className="comment__info comment__info--color">{comment.timestamp}</p>
+                </div>
+                <p className="comment__info">{comment.comment}</p>
+              </li>
+              
+            );
+          })}
 
             </ul>
         </section>
